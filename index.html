@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url('/accets/pexels-nathy-1398049.jpg'); /* රූපය යොදාගන්න */
+            background-size: cover; /* රූපය මුළු තිරයට ඇලවීම */
+            background-repeat: no-repeat; /* රූපය නැවත නැවත පෙනීම වැළැක්වීම */
+            background-position: center; 
+           
+        }
+        .container{
+            position: relative;
+            background-color: black;
+            opacity: 0.7;
+            width: 400px;
+            border-radius: 3px;
+            padding: 10px 20px 20px;
+            
+        }
+        .buttons{
+          display: grid;
+          grid-gap: 10px;
+          grid-template-columns: repeat(4, 1fr);
+        }
+        .buttons button{
+            padding: 10px 27px;
+            opacity: 0.7;
+            border: 0.2px;
+            border-radius: 2px;
+            box-shadow: 0px 3px;
+        }
+        #display{
+            height: 36px;
+            width: 359px;
+            border-radius: 2px;
+            margin-bottom: 6px;
+            background-color: rgb(46, 46, 46);
+            text-align: right; 
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            opacity: 0.8;
+        }
+        .ac{
+            margin-top: -1px;
+           width: 35px;
+           height: 35px;
+           margin-right: 6px;
+           background-color: red;
+           
+           border-radius: 2px;
+           border: 0.2px;
+           box-shadow : 0px 3px;
+        }
+        .red{
+            background-color: orangered;
+           
+        }
+        .red:hover{
+            background-color:rgb(107, 107, 210);
+        }
+        .aqa{
+            background-color: rgb(100, 254, 254);
+            opacity: 0.7;
+        }
+      .aqa:hover{
+        background-color: greenyellow;
+      }
+        .hoverButton:hover{
+            background-color: rgb(107, 107, 210);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <div  style="display: flex;">
+       
+            <button class="ac" onclick="clearDisplay()">c</button>
+        
+        
+            <div id="display">0</div>
+    </div>
+        <div class="buttons">
+            
+            <button class="hoverButton" onclick="appendNumber(7)">7</button>
+            <button class="hoverButton" onclick="appendNumber(8)">8</button>
+            <button class="hoverButton" onclick="appendNumber(9)">9</button>
+            <button class="red" onclick="setOperator('+')">+</button>
+           
+            <button class="hoverButton" onclick="appendNumber(4)">4</button>
+            <button class="hoverButton" onclick="appendNumber(5)">5</button>
+            <button class="hoverButton" onclick="appendNumber(6)">6</button>
+            <button class="red" onclick="setOperator('-')">-</button>
+          
+            <button class="hoverButton" onclick="appendNumber(1)">1</button>
+            <button class="hoverButton" onclick="appendNumber(2)">2</button>
+            <button class="hoverButton" onclick="appendNumber(3)">3</button>
+            <button class="red" onclick="setOperator('/')">/</button>
+          
+            <button class="hoverButton" onclick="appendNumber(0)">0</button>
+            <button class="hoverButton" onclick="appendNumber('.')">.</button>
+            <button class="aqa" onclick="calculate()">=</button>
+            <button class="red" onclick="setOperator('*')">*</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
